@@ -14,11 +14,20 @@
  * limitations under the License.
  */
 
-package com.hannesdorfmann.annotationprocessing101.factory.processor.sample;
+package com.hannesdorfmann.annotationprocessing101.factory;
+
+import com.hannesdorfmann.annotationprocessing101.factory.annotation.Factory;
 
 /**
  * @author Hannes Dorfmann
  */
-public interface Meal {
-  public float getPrice();
+@Factory(
+    id = "Calzone",
+    type = Meal.class
+)
+public class CalzonePizza implements Meal {
+
+  @Override public float getPrice() {
+    return 8.5f;
+  }
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hannesdorfmann.annotationprocessing101.factory.annotation.sample;
+package com.hannesdorfmann.annotationprocessing101.factory;
 
 /**
  * @author Hannes Dorfmann
