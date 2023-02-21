@@ -56,6 +56,7 @@ import javax.tools.Diagnostic;
       new LinkedHashMap<String, FactoryGroupedClasses>();
 
   @Override public synchronized void init(ProcessingEnvironment processingEnv) {
+    System.out.println("===================================Annotation init===================================");
     super.init(processingEnv);
     typeUtils = processingEnv.getTypeUtils();
     elementUtils = processingEnv.getElementUtils();
@@ -148,7 +149,7 @@ import javax.tools.Diagnostic;
 
   @Override
   public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-
+    System.out.println("===================================Annotation Process===================================");
     try {
 
       // Scan classes
