@@ -150,11 +150,16 @@ import javax.tools.Diagnostic;
   @Override
   public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
     System.out.println("===================================Annotation Process===================================");
+    for (TypeElement annotation:annotations) {//遍历
+      String annotationName = annotation.getSimpleName().toString();
+      System.out.println("annotationName:====" + annotationName);
+    }
+    for(Element element : roundEnv.getRootElements()){
+      System.out.println("RootElements:====" + element.getSimpleName());
+    }
     try {
-
       // Scan classes
       for (Element annotatedElement : roundEnv.getElementsAnnotatedWith(Factory.class)) {
-
         // Check if a class has been annotated with @Factory
         if (annotatedElement.getKind() != ElementKind.CLASS) {
           throw new ProcessingException(annotatedElement, "Only classes can be annotated with @%s",

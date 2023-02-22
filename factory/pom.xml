@@ -7,7 +7,7 @@
   <groupId>com.hannesdorfmann.annotationprocessing101.factorypattern</groupId>
   <artifactId>parent</artifactId>
   <version>1.0</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <modules>
     <module>annotation</module>
